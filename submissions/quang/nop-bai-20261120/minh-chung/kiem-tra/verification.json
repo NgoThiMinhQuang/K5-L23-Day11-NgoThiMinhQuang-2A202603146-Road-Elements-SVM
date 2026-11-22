@@ -38,10 +38,10 @@
     "chính": 0,
     "nhẹ": 0
   },
-  "exceptions": "See report section 5 and ngoai-le.md. User-confirmed exceptions; no new coach Release asserted.",
+  "exceptions": "See report section 5 and minh-chung/nhat-ky/ngoai-le.md. Invisible-lane exceptions are recorded from the images; no coach confirmation required under the user-defined scope.",
   "requirements_status": {
     "packaging": "Four separate ZIPs per user request; differs from original two-ZIP submission format.",
-    "lane_warnings": "4 QC1-02 warnings; user exceptions recorded, no coach confirmation supplied.",
+    "lane_warnings": "4 QC1-02 warnings retained for transparency; invisible lanes on A05/A09/A14 are image-based exceptions, with no coach confirmation required under the user-defined scope.",
     "cvat_completion_and_recheck": "User exception; not independently verified.",
     "r1_backup": "Not in submission after user-requested cleanup; committed changes retained in Git history.",
     "quality_score": "Not assessed without coach GT."

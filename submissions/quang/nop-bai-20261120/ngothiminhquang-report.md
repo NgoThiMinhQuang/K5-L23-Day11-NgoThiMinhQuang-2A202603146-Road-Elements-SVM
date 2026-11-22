@@ -42,9 +42,9 @@ Tổng **310 shape và 112 tag**. Đủ 12/12 ảnh front và 8/8 ảnh fisheye 
 
 | Ảnh | Nhãn / phân vân | Đã chọn | Lý do / giới hạn |
 | --- | --- | --- | --- |
-| A05 | Thiếu L1/R1 hay không có vạch | Không thêm vạch suy đoán | Không thấy vạch sơn rõ; hai cảnh báo được ghi nhận là ngoại lệ theo xác nhận của học viên |
-| A09 | R1 hay road_curb | Giữ road_curb, không thêm R1 | Còn một cảnh báo; ghi nhận ngoại lệ theo xác nhận của học viên |
-| A14 | R1 khó thấy trong ảnh đêm | Không thêm R1 suy đoán | Còn một cảnh báo; ghi nhận ngoại lệ theo xác nhận của học viên |
+| A05 | Thiếu L1/R1 hay không có vạch | Không thêm vạch suy đoán | Không thấy vạch sơn rõ; ghi ngoại lệ, không vẽ suy đoán |
+| A09 | R1 hay road_curb | Giữ road_curb, không thêm R1 | Không thấy vạch tương ứng rõ; ghi ngoại lệ, không vẽ suy đoán |
+| A14 | R1 khó thấy trong ảnh đêm | Không thêm R1 suy đoán | Không thấy vạch tương ứng rõ; ghi ngoại lệ, không vẽ suy đoán |
 | A09 | Hai nét hay một vạch đôi | Một tâm L2/solid/white/double | Tránh hai polyline đại diện hai mép của cùng vạch đôi |
 | A14 | Màu và loại vạch | L1/yellow/double; bỏ lane ngang | Ảnh có vàng đôi; nét ngang là vạch dừng |
 | A14 | drivable khoét theo xe phía trước | Đã sửa hai polygon trong bộ nộp | Bỏ các đỉnh bám thân xe/bánh xe phía trước; biên bị che được nội suy, chưa đối chiếu GT |
@@ -94,10 +94,10 @@ Bốn ZIP ở định dạng CVAT for images 1.1, mỗi ZIP chỉ chứa `annota
 
 **Ngoại lệ áp dụng cho bài lab ngày 20/11/2026:**
 
-1. Giữ nguyên nhãn ở A05/A09/A14 và ghi nhận bốn cảnh báo QC1-02 trên là ngoại lệ; không thêm vạch suy đoán. Manifest vẫn phản ánh đúng bốn cảnh báo.
+1. A05 không thấy rõ L1/R1; A09 và A14 không thấy rõ R1: ghi ngoại lệ theo ảnh, không thêm vạch suy đoán và không chờ coach xác nhận. Manifest vẫn giữ bốn cảnh báo QC1-02 để phản ánh đúng kết quả lint.
 2. Bước chốt nhãn trên CVAT và kiểm lại sau sửa, gồm đối chiếu job/file, completed và export lại, được ghi nhận là ngoại lệ. Vì vậy cột số shape trên job ghi “ngoại lệ”, không điền số chưa kiểm chứng.
 
-Chi tiết lưu trong [ghi nhận ngoại lệ](minh-chung/nhat-ky/ngoai-le.md). Đây là xác nhận của học viên trong quá trình hoàn thiện hồ sơ; chưa có xác nhận riêng của coach cho từng cảnh báo hoặc quyết định Release mới của người kiểm trong hồ sơ.
+Chi tiết lưu trong [ghi nhận ngoại lệ](minh-chung/nhat-ky/ngoai-le.md). Các trường hợp không thấy vạch được xử lý là ngoại lệ theo ảnh; không yêu cầu coach xác nhận theo phạm vi bài nộp đã thống nhất.
 
 **Kiểm công cụ:** **31/31 test đạt**; `road_check selftest` in **SELFTEST PASS** trên dữ liệu tổng hợp. ZIP/CRC/XML, SHA-256, số lượng nhãn, trích đoạn XML và các liên kết minh chứng đều hợp lệ. Không dùng selftest để suy ra điểm chất lượng nhãn. Kết quả rà soát: [verification.json](minh-chung/kiem-tra/verification.json).
 

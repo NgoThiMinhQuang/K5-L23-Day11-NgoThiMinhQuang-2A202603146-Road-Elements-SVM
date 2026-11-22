@@ -1,8 +1,15 @@
-# Ngoại lệ của bài lab ngày 20/11/2026
+# Ngoại lệ — Bài lab ngày 20/11/2026
 
-Hai mục ngoại lệ theo xác nhận của học viên:
+## Ảnh không thấy vạch
 
-1. Bốn cảnh báo QC1-02: A05 thiếu L1/R1, A09 thiếu R1, A14 thiếu R1.
-2. Chốt nhãn trên CVAT và kiểm lại sau sửa.
+| Ảnh | Vị trí | Xử lý |
+| --- | --- | --- |
+| A05 | L1 và R1 | Không thấy vạch sơn rõ; không vẽ suy đoán |
+| A09 | R1 | Không thấy vạch tương ứng rõ; giữ road_curb, không thêm lane |
+| A14 | R1 | Không thấy vạch tương ứng rõ trên ảnh đêm; không thêm lane |
 
-Giữ nguyên cảnh báo trong manifest. Không ghi nhận thành xác nhận của coach, trạng thái completed đã kiểm tra, hay quyết định Release của người kiểm. Các bản annotation nguồn được giữ nguyên.
+Ghi nhận ngoại lệ theo ảnh, không chờ coach xác nhận theo phạm vi bài nộp đã thống nhất. Giữ nguyên bốn cảnh báo QC1-02 trong log lint và manifest để phản ánh đúng dữ liệu.
+
+## Chốt CVAT và kiểm lại sau sửa
+
+Bước chốt nhãn trên CVAT và kiểm lại sau sửa được học viên xác nhận là ngoại lệ. Không điền trạng thái completed hoặc số shape trên job khi chưa xác minh.

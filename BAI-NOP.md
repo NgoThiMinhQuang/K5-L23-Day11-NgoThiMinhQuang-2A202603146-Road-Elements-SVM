@@ -48,8 +48,8 @@ Các thư mục `docs`, `templates`, `lab`, `src`, `configs`, `manifests`, `test
 | QC hai chiều | Có phiếu Quang kiểm Trại, phiếu Trại kiểm Quang và phản hồi sửa |
 | Công cụ | 31/31 test đạt, SELFTEST PASS trên dữ liệu tổng hợp |
 | Cách đóng gói | Bốn ZIP riêng theo yêu cầu học viên; khác đặc tả gốc yêu cầu hai ZIP gộp và tổng năm file |
-| Cảnh báo L1/R1 | Còn bốn cảnh báo ở A05/A09/A14; ngoại lệ theo học viên, chưa có xác nhận riêng của coach trong hồ sơ |
+| Cảnh báo L1/R1 | A05 không thấy rõ L1/R1; A09/A14 không thấy rõ R1: ngoại lệ theo ảnh, không chờ coach xác nhận; giữ nguyên cảnh báo lint |
 | Completed, export và QC lại trên CVAT | Ngoại lệ theo học viên; chưa xác minh lại |
 | Bản r1 riêng | Không kèm bộ nộp sau khi dọn bản cũ theo yêu cầu; các thay đổi đã commit có trong lịch sử Git |
 
-Đối chiếu với [yêu cầu nộp](SUBMISSION.md), [đặc tả bàn giao](docs/delivery_road_v1.0.md) và [rubric](RUBRIC.md). Các ngoại lệ được ghi tại mục 5 báo cáo; không đồng nghĩa với quyết định Release của người kiểm. Chất lượng hình học theo GT và điểm cuối cùng do giáo viên đánh giá.
+Đối chiếu với [yêu cầu nộp](SUBMISSION.md), [đặc tả bàn giao](docs/delivery_road_v1.0.md) và [rubric](RUBRIC.md). Các ngoại lệ được ghi tại mục 5 báo cáo. Chất lượng hình học theo GT và điểm cuối cùng do giáo viên đánh giá.

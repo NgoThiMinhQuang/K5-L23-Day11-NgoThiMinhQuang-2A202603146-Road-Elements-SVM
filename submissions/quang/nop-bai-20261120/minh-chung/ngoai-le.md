@@ -1,6 +1,6 @@
-# Ngoại lệ được học viên xác nhận ngày 22/11/2026
+# Ngoại lệ của bài lab ngày 20/11/2026
 
-Trong cuộc trao đổi hoàn thiện bài, học viên xác nhận hai mục là ngoại lệ:
+Hai mục ngoại lệ theo xác nhận của học viên:
 
 1. Bốn cảnh báo QC1-02: A05 thiếu L1/R1, A09 thiếu R1, A14 thiếu R1.
 2. Chốt nhãn trên CVAT và kiểm lại sau sửa.

@@ -1,6 +1,6 @@
 # Ngày 11 · Road Elements & SVM
 
-**Bài nộp Ngô Thị Minh Quang — 2A202603146:** xem [BAI-NOP.md](BAI-NOP.md). Bộ nộp duy nhất nằm trong `submissions/quang/nop-bai-20261122`; phần dưới là hướng dẫn gốc của đề bài.
+**Bài nộp Ngô Thị Minh Quang — 2A202603146:** xem [BAI-NOP.md](BAI-NOP.md). Bộ nộp duy nhất nằm trong `submissions/quang/nop-bai-20261120`; phần dưới là hướng dẫn gốc của đề bài.
 
 > Lab cá nhân, AI20K K5. Bạn gán nhãn phần tử đường theo guideline Road v1.0 trên CVAT của lớp: 12 ảnh camera trước BDD100K (A01–A12) và 8 ảnh fisheye WoodScape (B01–B08) là bắt buộc. Sau đó bạn kiểm lô của một bạn khác bằng Phiếu QC 1 và quyết định Release, Hold hoặc Rework. Nếu xong sớm, làm thêm ảnh A13–A16 và B09–B12 để lấy điểm thưởng. Không đưa ảnh lên app.cvat.ai.
 

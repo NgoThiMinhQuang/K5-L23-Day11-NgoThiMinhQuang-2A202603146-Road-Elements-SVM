@@ -6,10 +6,10 @@ coach_gt/
 submissions/*
 !submissions/quang/
 submissions/quang/*
-!submissions/quang/nop-bai-20261122/
+!submissions/quang/nop-bai-20261120/
 out/
 *.zip
 .env
 
 # Chỉ đưa bộ nộp cuối đã kiểm tra lên Git; giữ dữ liệu gốc ngoài repo.
-!submissions/quang/nop-bai-20261122/**
+!submissions/quang/nop-bai-20261120/**

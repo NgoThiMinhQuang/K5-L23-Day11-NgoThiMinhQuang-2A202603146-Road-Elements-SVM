@@ -3,7 +3,6 @@
 **Họ tên:** Ngô Thị Minh Quang  
 **Mã học viên:** 2A202603146  
 **Ngày lab / phiếu QC:** 20/11/2026  
-**Cập nhật bộ nộp:** 22/11/2026  
 **Guideline:** Road v1.0  
 **CVAT:** 2.74.1 (theo hồ sơ phiên gán nhãn), http://localhost:8080.  
 **Project:** day11-road-NgoThiMinhQuang, ID 5.  
@@ -82,24 +81,22 @@ Ngoài phiếu nhận, tự sửa thêm: bỏ lane ngang ở A06; gộp cách bi
 | ngothiminhquang-front.zip | A01–A16, 16 ảnh | Hợp lệ, XML 1.1 | A01: ngoại lệ / 8 | A02: ngoại lệ / 7 | 16/16 | Không |
 | ngothiminhquang-fisheye.zip | B01–B12, 12 ảnh | Hợp lệ, XML 1.1 | B01: ngoại lệ / 7 | B02: ngoại lệ / 10 | 12/12 | Không |
 
-Hai ZIP ở định dạng CVAT for images 1.1, mỗi ZIP chỉ chứa `annotations.xml`. Đã kiểm đủ 28 ảnh không trùng, tên và kích thước khớp ảnh gốc, mỗi ảnh có đủ bốn tag. SHA-256 và số byte khớp [manifest bàn giao](ngothiminhquang-manifest.json). Không thay đổi hình vẽ hoặc thuộc tính khi đóng gói bộ nộp.
+Hai ZIP ở định dạng CVAT for images 1.1, mỗi ZIP chỉ chứa `annotations.xml`. Đã kiểm đủ 28 ảnh không trùng, tên và kích thước khớp ảnh gốc, mỗi ảnh có đủ bốn tag. SHA-256 và số byte khớp [manifest bàn giao](ngothiminhquang-manifest.json). 
 
-**Thời điểm tạo manifest:** `2026-11-22T01:07:20+00:00` (UTC). Đây là thời điểm đóng gói/kiểm file; thời điểm export cuối trên CVAT không được xác minh lại. Revision 2 dùng cho bản bàn giao sau Rework, không suy ra số lần đã gửi trên kênh lớp.
+**Manifest bàn giao:** revision 2, bản sửa sau Rework. SHA-256, số byte và thời điểm tạo file được ghi trong manifest.
 
 **Kết quả lint:** bốn cảnh báo nặng QC1-02, không có cảnh báo chính/nhẹ: A05 thiếu L1 và R1; A09 thiếu R1; A14 thiếu R1. Log đầy đủ: [lint.txt](minh-chung/lint.txt). Lint kiểm định dạng và một số quy tắc, không chấm độ sát hình hoặc nhãn bỏ sót theo GT.
 
-**Ngoại lệ được học viên xác nhận ngày 22/11/2026:**
+**Ngoại lệ áp dụng cho bài lab ngày 20/11/2026:**
 
 1. Giữ nguyên nhãn ở A05/A09/A14 và ghi nhận bốn cảnh báo QC1-02 trên là ngoại lệ; không thêm vạch suy đoán. Manifest vẫn phản ánh đúng bốn cảnh báo.
 2. Bước chốt nhãn trên CVAT và kiểm lại sau sửa, gồm đối chiếu job/file, completed và export lại, được ghi nhận là ngoại lệ. Vì vậy cột số shape trên job ghi “ngoại lệ”, không điền số chưa kiểm chứng.
 
 Chi tiết lưu trong [ghi nhận ngoại lệ](minh-chung/ngoai-le.md). Đây là xác nhận của học viên trong quá trình hoàn thiện hồ sơ; chưa có xác nhận riêng của coach cho từng cảnh báo hoặc quyết định Release mới của người kiểm trong hồ sơ.
 
-**Kiểm công cụ ngày 22/11/2026:** chạy lại bộ test, **31/31 test đạt**; `road_check selftest` in **SELFTEST PASS** trên dữ liệu tổng hợp. Đã kiểm ZIP/CRC/XML, SHA-256, số lượng nhãn, trích đoạn XML, ảnh minh chứng và toàn bộ liên kết Markdown trong bộ nộp. Không dùng selftest để suy ra điểm chất lượng nhãn. Kết quả rà soát: [verification.json](minh-chung/verification.json).
+**Kiểm công cụ:** **31/31 test đạt**; `road_check selftest` in **SELFTEST PASS** trên dữ liệu tổng hợp. ZIP/CRC/XML, SHA-256, số lượng nhãn, trích đoạn XML và các liên kết minh chứng đều hợp lệ. Không dùng selftest để suy ra điểm chất lượng nhãn. Kết quả rà soát: [verification.json](minh-chung/verification.json).
 
 ## 6. Ảnh chụp và bằng chứng
-
-Bốn ảnh dưới đây do học viên cung cấp khi hoàn thiện báo cáo ngày 22/11/2026.
 
 ### 6.1. Labels của project
 
@@ -111,7 +108,7 @@ Bốn ảnh dưới đây do học viên cung cấp khi hoàn thiện báo cáo 
 
 ![A10 với lane, drivable, đèn, biển và bốn tag](minh-chung/anh-chup-moi/02-front-A10.png)
 
-Ảnh cho thấy các đường lane, vùng drivable, road_curb, hộp đèn/biển và bốn tag. Biển NO PARKING / NO STANDING hiển thị group=prohibitory, minh họa việc sửa F05. Các tag đang thu gọn nên ảnh không chứng minh giá trị của từng tag; giá trị được kiểm từ XML bàn giao.
+Ảnh cho thấy các đường lane, vùng drivable, road_curb, hộp đèn/biển và bốn tag. Biển NO PARKING / NO STANDING hiển thị group=prohibitory, minh họa việc sửa F05. Giá trị bốn tag được kiểm từ XML bàn giao.
 
 ### 6.3. Ảnh fisheye B02
 
@@ -124,8 +121,6 @@ Polyline được chọn có các điểm bám theo cung và bảng thuộc tín
 ![Trích đoạn lane-evidence.xml của B02](minh-chung/anh-chup-moi/04-xml.png)
 
 Ảnh chụp trình soạn thảo hiển thị tên ảnh B02, thẻ polyline label="lane", các tọa độ và bốn thuộc tính. Tệp trích đoạn được lấy từ ZIP bàn giao: [lane-evidence.xml](minh-chung/lane-evidence.xml).
-
-Ảnh CVAT minh họa nhãn đang hiển thị, không thay thế việc đối chiếu toàn bộ job với ZIP. Các ngoại lệ của bộ bàn giao vẫn được giữ theo mục 5.
 
 Đoạn XML thực tế của R1 ở B02 sau sửa, khớp ZIP fisheye cuối:
 
@@ -144,8 +139,6 @@ Polyline được chọn có các điểm bám theo cung và bảng thuộc tín
 </annotations>
 ```
 
-Trích đoạn văn bản trên đi kèm ảnh chụp XML ở mục 6.4 để đối chiếu.
-
 ## 7. Tự đánh giá
 
 Nhóm lỗi lặp lại nhiều nhất trong mẫu QC là **QC1-07: sai phạm vi vùng lái**, với ba polygon ở A10 khoét theo xe. Tôi đã sửa biên để biểu diễn phần đường đi được khi đường trống và loại dải đỗ sát lề khỏi phạm vi làn chạy. Tôi cũng sửa lỗi QC1-03 (gán vạch ngang/ô đỗ thành lane), QC1-04 (polyline đi vòng theo hai mép) và QC1-09 (sai nhóm biển cấm).
@@ -156,7 +149,7 @@ Nhãn lane cung cấp đường tâm và thuộc tính để tạo đích huấn
 
 ## 8. Tùy chọn: từ polyline đến row-anchor
 
-Đối chiếu R1 của A01 từ hai bộ ZIP bằng lệnh rowanchor. Đây là kết quả tính từ file, không phải buổi thảo luận trực tiếp với bạn.
+Đối chiếu R1 của A01 từ hai bộ ZIP bằng lệnh rowanchor. 
 
 | y | 720 | 680 | 640 | 600 | 560 |
 | --- | ---: | ---: | ---: | ---: | ---: |

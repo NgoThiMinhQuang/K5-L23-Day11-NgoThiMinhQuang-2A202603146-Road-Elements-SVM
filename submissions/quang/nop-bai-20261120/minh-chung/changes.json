@@ -77,6 +77,13 @@
       "image": "A14",
       "qc": "QC1-07 tự kiểm",
       "action": "Vẽ lại hai vùng drivable liên tục qua xe phía trước, bỏ các đỉnh bám thân xe/bánh xe; giữ biên thân xe mình. Biên bị che là nội suy hình học, chưa đối chiếu GT."
+    },
+    {
+      "image": "A10",
+      "qc": "QC1-01 weather",
+      "action": "Đổi weather từ clear thành rain theo guideline: ảnh có mưa và mặt đường ướt rõ.",
+      "front_sha256_before": "22248320167f7282264e90bc4e8ce445595dd517affddf1f078d8b5da04b84b2",
+      "front_sha256_after": "7826341c93e958b4814c0f7629bc181be2ae2ccb0b07236b3752c23c351e85e9"
     }
   ],
   "counts": {

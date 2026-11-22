@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22T01:47:13.286388+00:00",
+  "checked_at": "2026-11-22T01:55:19.276045+00:00",
   "checks": {
     "tests_passed": 31,
     "selftest": "PASS (synthetic data)",
@@ -9,7 +9,11 @@
     "shapes": 310,
     "tags": 112,
     "new_screenshots": 4,
-    "xml_excerpt_matches_submission": true
+    "xml_excerpt_matches_submission": true,
+    "camera_values_match_filenames": true,
+    "side_camera_lanes_position_other": true,
+    "A10_weather": "rain (wet road, per Road v1.0)",
+    "submission_files": 5
   },
   "lint": {
     "nặng": 4,

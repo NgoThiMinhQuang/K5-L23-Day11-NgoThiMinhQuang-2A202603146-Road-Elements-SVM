@@ -7,6 +7,8 @@
 **CVAT:** 2.74.1 (theo hồ sơ phiên gán nhãn), http://localhost:8080.  
 **Project:** day11-road-NgoThiMinhQuang, ID 5.  
 **Phiên bản bộ bàn giao:** revision 2, bản sửa sau phiếu Rework.  
+**Thời điểm export trên CVAT:** ngoại lệ theo mục 5.  
+**Số lần nộp lại chính thức sau Rework:** chưa có xác nhận; revision 2 là phiên bản của bộ file hiện tại.  
 **Phạm vi:** 20 ảnh bắt buộc và 8 ảnh thêm; 310 shape, 112 tag.  
 **Bộ nộp:** hai ZIP nhãn, manifest, Phiếu QC 1 kiểm Trại và báo cáo này. Minh chứng được lưu trong thư mục `minh-chung` đi kèm.
 
@@ -50,6 +52,7 @@ Tổng **310 shape và 112 tag**. Đủ 12/12 ảnh front và 8/8 ảnh fisheye 
 | A10 | Vùng đường hay đường bao xe | Vẽ lại vùng liên tục, bỏ alternative thuộc dải đỗ trái | Nội suy biên mặt đường dưới xe che; chưa đối chiếu GT |
 | B02 | Đường đi vòng hay đường tâm | Một polyline R1 hở gần → xa | Giữ kind=double; chưa chứng nhận độ lệch ≤5 px |
 | B11 | Lane hay vạch ô đỗ/gạch chéo | Bỏ sáu lane E01–E06 | Ngoài phạm vi lane của Road v1.0 |
+| A10 | Weather clear hay rain | Chọn rain | Có mưa và mặt đường ướt rõ, phù hợp quy tắc weather của Road v1.0 |
 | B06/B08 | Mép thân xe, bóng, cạnh đảo/ray | Không sửa suy đoán | Phiếu chưa đủ căn cứ ghi thêm lỗi |
 
 Cách xử lý cảnh báo L1/R1 và phạm vi ngoại lệ của bộ bàn giao được ghi tại mục 5. Không bổ sung vạch không thấy được chỉ để hết cảnh báo lint.
@@ -70,7 +73,7 @@ Cách xử lý cảnh báo L1/R1 và phạm vi ngoại lệ của bộ bàn giao
 | F06, QC1-04, B02 | 1 chính | Thay đường vòng bằng tâm vạch đôi | Đã thay polyline hở gần → xa |
 | E01–E06, QC1-03, B11 | 6 nặng, ảnh thêm | Ô đỗ/gạch chéo không gán lane | Đã bỏ sáu lane |
 
-Ngoài phiếu nhận, tự sửa thêm: bỏ lane ngang ở A06; gộp cách biểu diễn vạch đôi A09 và A14; vẽ lại hai vùng drivable A14 qua xe phía trước. Nhật ký sửa được giữ trong [changes.json](minh-chung/changes.json). Số lỗi trong phiếu nhận là kết quả kiểm bản trước sửa, được giữ nguyên để truy vết.
+Đã sửa bổ sung tag weather A10 từ clear thành rain theo guideline. Ngoài phiếu nhận, tự sửa thêm: bỏ lane ngang ở A06; gộp cách biểu diễn vạch đôi A09 và A14; vẽ lại hai vùng drivable A14 qua xe phía trước. Nhật ký sửa được giữ trong [changes.json](minh-chung/changes.json). Số lỗi trong phiếu nhận là kết quả kiểm bản trước sửa, được giữ nguyên để truy vết.
 
 **Phiếu tôi kiểm Trại:** [ngothiminhquang-qc1-for-trai.md](ngothiminhquang-qc1-for-trai.md), ngày 20/11/2026. Đủ 12 mã QC; mẫu bắt buộc 118 nhãn; một lỗi nặng và năm lỗi chính (4,24%), quyết định Rework. B11 được xét riêng. Việc sửa lô của tôi không thay đổi kết quả phiếu tôi lập cho Trại.
 

@@ -4,12 +4,12 @@
   "guideline": "Road v1.0",
   "name": "ngothiminhquang",
   "revision": 2,
-  "created_at": "2026-11-22T01:07:20+00:00",
+  "created_at": "2026-11-22T01:55:19+00:00",
   "files": [
     {
       "file": "ngothiminhquang-front.zip",
       "bytes": 14842,
-      "sha256": "22248320167f7282264e90bc4e8ce445595dd517affddf1f078d8b5da04b84b2",
+      "sha256": "7826341c93e958b4814c0f7629bc181be2ae2ccb0b07236b3752c23c351e85e9",
       "contains_images": false,
       "images": 16,
       "images_unlabelled": 0,

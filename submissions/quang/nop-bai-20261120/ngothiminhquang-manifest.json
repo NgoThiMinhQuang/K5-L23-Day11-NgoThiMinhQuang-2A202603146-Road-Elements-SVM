@@ -4,40 +4,72 @@
   "guideline": "Road v1.0",
   "name": "ngothiminhquang",
   "revision": 2,
-  "created_at": "2026-11-22T01:55:19+00:00",
+  "created_at": "2026-11-22T01:57:18+00:00",
   "files": [
     {
       "file": "ngothiminhquang-front.zip",
-      "bytes": 14842,
-      "sha256": "7826341c93e958b4814c0f7629bc181be2ae2ccb0b07236b3752c23c351e85e9",
-      "contains_images": false,
-      "images": 16,
-      "images_unlabelled": 0,
-      "images_all_tags": 16,
-      "shapes_by_label": {
-        "crosswalk": 16,
-        "drivable": 40,
-        "lane": 56,
-        "road_curb": 6,
-        "traffic_light": 31,
-        "traffic_sign": 49
-      }
-    },
-    {
-      "file": "ngothiminhquang-fisheye.zip",
-      "bytes": 16606,
-      "sha256": "4dc9e480e0bf6fe9bdf9d82888595a2b7f2480e455c08aacddabd485b4d79a94",
+      "bytes": 11151,
+      "sha256": "7e8eb4de8fd5be105030bd26ae5af71dff3cc20f8b49ed0e3744fb2b0cb25d54",
       "contains_images": false,
       "images": 12,
       "images_unlabelled": 0,
       "images_all_tags": 12,
       "shapes_by_label": {
-        "crosswalk": 17,
-        "drivable": 25,
-        "lane": 32,
-        "road_curb": 17,
+        "crosswalk": 10,
+        "drivable": 29,
+        "lane": 41,
+        "road_curb": 4,
+        "traffic_light": 24,
+        "traffic_sign": 33
+      }
+    },
+    {
+      "file": "ngothiminhquang-front-extra.zip",
+      "bytes": 4649,
+      "sha256": "0f5c0f025da86a716c1808800ab725a20cbbccdd987b825d8e6d7da85b1be890",
+      "contains_images": false,
+      "images": 4,
+      "images_unlabelled": 0,
+      "images_all_tags": 4,
+      "shapes_by_label": {
+        "crosswalk": 6,
+        "drivable": 11,
+        "lane": 15,
+        "road_curb": 2,
+        "traffic_light": 7,
+        "traffic_sign": 16
+      }
+    },
+    {
+      "file": "ngothiminhquang-fisheye.zip",
+      "bytes": 13582,
+      "sha256": "25cf211b3fb1780511449e6bd920eec8b749d2010b4b63bd5d68005f9d89d442",
+      "contains_images": false,
+      "images": 8,
+      "images_unlabelled": 0,
+      "images_all_tags": 8,
+      "shapes_by_label": {
+        "crosswalk": 12,
+        "drivable": 19,
+        "lane": 28,
+        "road_curb": 14,
         "traffic_light": 9,
         "traffic_sign": 12
+      }
+    },
+    {
+      "file": "ngothiminhquang-fisheye-extra.zip",
+      "bytes": 3863,
+      "sha256": "4c1d7bf688b676b462cb43aa532e078f513e8c7145dbf2a1d2434a00d0cd079f",
+      "contains_images": false,
+      "images": 4,
+      "images_unlabelled": 0,
+      "images_all_tags": 4,
+      "shapes_by_label": {
+        "crosswalk": 5,
+        "drivable": 6,
+        "lane": 4,
+        "road_curb": 3
       }
     }
   ],

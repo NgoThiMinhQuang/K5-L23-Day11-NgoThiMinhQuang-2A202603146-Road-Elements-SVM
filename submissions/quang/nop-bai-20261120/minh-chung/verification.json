@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22T01:55:19.276045+00:00",
+  "checked_at": "2026-11-22T01:57:18.952314+00:00",
   "checks": {
     "tests_passed": 31,
     "selftest": "PASS (synthetic data)",
@@ -13,7 +13,14 @@
     "camera_values_match_filenames": true,
     "side_camera_lanes_position_other": true,
     "A10_weather": "rain (wet road, per Road v1.0)",
-    "submission_files": 5
+    "submission_files": 7,
+    "zip_images": {
+      "ngothiminhquang-front.zip": 12,
+      "ngothiminhquang-front-extra.zip": 4,
+      "ngothiminhquang-fisheye.zip": 8,
+      "ngothiminhquang-fisheye-extra.zip": 4
+    },
+    "annotations_unchanged_after_split": true
   },
   "lint": {
     "nặng": 4,

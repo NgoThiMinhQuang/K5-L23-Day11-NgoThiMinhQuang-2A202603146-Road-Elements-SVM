@@ -10,7 +10,7 @@
 **Thời điểm export trên CVAT:** ngoại lệ theo mục 5.  
 **Số lần nộp lại chính thức sau Rework:** chưa có xác nhận; revision 2 là phiên bản của bộ file hiện tại.  
 **Phạm vi:** 20 ảnh bắt buộc và 8 ảnh thêm; 310 shape, 112 tag.  
-**Bộ nộp:** hai ZIP nhãn, manifest, Phiếu QC 1 kiểm Trại và báo cáo này. Minh chứng được lưu trong thư mục `minh-chung` đi kèm.
+**Bộ nộp:** bốn ZIP nhãn tách riêng theo task, manifest, Phiếu QC 1 kiểm Trại và báo cáo này. Minh chứng được lưu trong thư mục `minh-chung` đi kèm.
 
 ## 1. Kiểm project
 
@@ -19,14 +19,14 @@
 | 6 label hình | lane, road_curb, crosswalk, drivable, traffic_light, traffic_sign | Kiểu polyline/polygon/box đúng trong XML |
 | Thuộc tính, giá trị | Không có cảnh báo sai tên hoặc giá trị | Lint không xác nhận đúng ngữ nghĩa theo ảnh |
 | 4 tag ảnh | 28/28 ảnh đủ camera, timeofday, weather, source | 112 tag, camera khớp tên ảnh, source=real |
-| 4 task | front 12, front-extra 4, fisheye 8, fisheye-extra 4 | Khi bàn giao gộp thành hai ZIP front/fisheye |
+| 4 task | front 12, front-extra 4, fisheye 8, fisheye-extra 4 | Bàn giao bốn ZIP riêng: front, front-extra, fisheye, fisheye-extra |
 | Completed / chốt CVAT | Ngoại lệ trong bộ bàn giao | Chi tiết tại mục 5; không xác minh lại job trong lần đóng gói |
 
 Kết thúc polyline bằng N/Done sau khi đặt điểm từ gần ra xa trên tâm vệt sơn, kiểm Details rồi Save. Vạch đứt cùng một ranh giới dùng một polyline; vạch đôi dùng một đường tâm với kind=double. Mỗi tag là label riêng với thuộc tính value; kiểm lại giá trị mặc định ngay sau khi tạo.
 
 ## 2. Số lượng đã gán sau sửa
 
-Đếm trực tiếp từ hai ZIP bàn giao, phân nhóm theo mã ảnh. Shape không bao gồm tag ảnh.
+Đếm trực tiếp từ bốn ZIP bàn giao, phân nhóm theo mã ảnh. Shape không bao gồm tag ảnh.
 
 | Task | Ảnh | lane | road_curb | crosswalk | drivable | traffic_light | traffic_sign |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -81,10 +81,12 @@ Cách xử lý cảnh báo L1/R1 và phạm vi ngoại lệ của bộ bàn giao
 
 | File | Phạm vi | Mở ZIP / CRC / XML | Shape ảnh 1 (job / file) | Shape ảnh 2 (job / file) | Camera | Kèm ảnh gốc |
 | --- | --- | --- | --- | --- | --- | --- |
-| ngothiminhquang-front.zip | A01–A16, 16 ảnh | Hợp lệ, XML 1.1 | A01: ngoại lệ / 8 | A02: ngoại lệ / 7 | 16/16 | Không |
-| ngothiminhquang-fisheye.zip | B01–B12, 12 ảnh | Hợp lệ, XML 1.1 | B01: ngoại lệ / 7 | B02: ngoại lệ / 10 | 12/12 | Không |
+| ngothiminhquang-front.zip | A01–A12, 12 ảnh | Hợp lệ, XML 1.1 | A01: ngoại lệ / 8 | A02: ngoại lệ / 7 | 12/12 | Không |
+| ngothiminhquang-front-extra.zip | A13–A16, 4 ảnh | Hợp lệ, XML 1.1 | A13: ngoại lệ / 8 | A14: ngoại lệ / 13 | 4/4 | Không |
+| ngothiminhquang-fisheye.zip | B01–B08, 8 ảnh | Hợp lệ, XML 1.1 | B01: ngoại lệ / 7 | B02: ngoại lệ / 10 | 8/8 | Không |
+| ngothiminhquang-fisheye-extra.zip | B09–B12, 4 ảnh | Hợp lệ, XML 1.1 | B09: ngoại lệ / 7 | B10: ngoại lệ / 4 | 4/4 | Không |
 
-Hai ZIP ở định dạng CVAT for images 1.1, mỗi ZIP chỉ chứa `annotations.xml`. Đã kiểm đủ 28 ảnh không trùng, tên và kích thước khớp ảnh gốc, mỗi ảnh có đủ bốn tag. SHA-256 và số byte khớp [manifest bàn giao](ngothiminhquang-manifest.json). 
+Bốn ZIP ở định dạng CVAT for images 1.1, mỗi ZIP chỉ chứa `annotations.xml`. Đủ 28 ảnh không trùng; hình vẽ, tọa độ, thuộc tính và tag giữ nguyên khi tách theo task. Mỗi ảnh có đủ bốn tag; SHA-256 và số byte khớp [manifest bàn giao](ngothiminhquang-manifest.json).
 
 **Manifest bàn giao:** revision 2, bản sửa sau Rework. SHA-256, số byte và thời điểm tạo file được ghi trong manifest.
 

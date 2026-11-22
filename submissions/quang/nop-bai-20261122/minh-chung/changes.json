@@ -1,0 +1,117 @@
+{
+  "source": [
+    {
+      "file": "ngothiminhquang-front.zip",
+      "sha256": "13cca2805994ea3dff087c83ab45fe2263f7515ada5c66f1350cf17b1d7d9def"
+    },
+    {
+      "file": "ngothiminhquang-front-extra.zip",
+      "sha256": "2bd769dec8a9bec40c8dd45d17bb7b4d7067eb5eb7ead68012b84faf26211ba4"
+    },
+    {
+      "file": "ngothiminhquang-fisheye.zip",
+      "sha256": "3e7e6fecb59cf93e8d37b298173dc57224fec2e1b9325a0fedcabf56027eea04"
+    },
+    {
+      "file": "ngothiminhquang-fisheye-extra.zip",
+      "sha256": "f59a475ad3f59a67d52683fdeb4337dd4541748e261f85375f3e20778684bfb9"
+    }
+  ],
+  "changes": [
+    {
+      "image": "A08",
+      "qc": "F01",
+      "action": "Bỏ lane#32 là nét sơn ngang tại giao lộ."
+    },
+    {
+      "image": "A10",
+      "qc": "F02",
+      "action": "Vẽ lại biên trên direct theo vùng đường liên tục dưới xe khác; giữ biên thân xe mình."
+    },
+    {
+      "image": "A10",
+      "qc": "F03",
+      "action": "Vẽ lại alternative bên phải, bỏ các đoạn lõm bám thân xe; biên bị che cần người kiểm rà lại."
+    },
+    {
+      "image": "A10",
+      "qc": "F04",
+      "action": "Bỏ polygon alternative#6 thuộc dải đỗ xe sát lề trái, không phải làn chạy bên cạnh."
+    },
+    {
+      "image": "A10",
+      "qc": "QC1-07 bổ sung",
+      "action": "Làm liền biên đầu xa của alternative còn lại bên trái, bỏ đoạn ôm xe."
+    },
+    {
+      "image": "A10",
+      "qc": "F05",
+      "action": "Đổi group biển NO PARKING / NO STANDING từ information sang prohibitory."
+    },
+    {
+      "image": "B02",
+      "qc": "F06",
+      "action": "Thay R1 đi vòng bằng một polyline tâm hở gần ra xa, giữ kind=double."
+    },
+    {
+      "image": "B11",
+      "qc": "E01–E06",
+      "action": "Bỏ sáu lane thuộc ô đỗ / vùng gạch chéo, giữ bốn tag và polygon còn lại."
+    },
+    {
+      "image": "A14",
+      "qc": "Tự kiểm",
+      "action": "Gộp hai nét vàng đôi thành một tâm L1/yellow/double; bỏ lane ngang là vạch dừng."
+    },
+    {
+      "image": "A06",
+      "qc": "Tự kiểm",
+      "action": "Bỏ lane ngang thuộc vạch dừng; đổi thứ tự điểm không sửa được sai loại đối tượng."
+    },
+    {
+      "image": "A09",
+      "qc": "Tự kiểm",
+      "action": "Thay hai nét của vạch trắng đôi bằng một polyline tâm L2/solid/white/double."
+    },
+    {
+      "image": "A14",
+      "qc": "QC1-07 tự kiểm",
+      "action": "Vẽ lại hai vùng drivable liên tục qua xe phía trước, bỏ các đỉnh bám thân xe/bánh xe; giữ biên thân xe mình. Biên bị che là nội suy hình học, chưa đối chiếu GT."
+    }
+  ],
+  "counts": {
+    "front": {
+      "traffic_sign": 33,
+      "lane": 41,
+      "drivable": 29,
+      "road_curb": 4,
+      "traffic_light": 24,
+      "crosswalk": 10
+    },
+    "front-extra": {
+      "drivable": 11,
+      "traffic_sign": 16,
+      "road_curb": 2,
+      "lane": 15,
+      "traffic_light": 7,
+      "crosswalk": 6
+    },
+    "fisheye": {
+      "traffic_light": 9,
+      "lane": 28,
+      "road_curb": 14,
+      "crosswalk": 12,
+      "drivable": 19,
+      "traffic_sign": 12
+    },
+    "fisheye-extra": {
+      "crosswalk": 5,
+      "lane": 4,
+      "drivable": 6,
+      "road_curb": 3
+    }
+  },
+  "status": "Local revision; not uploaded to CVAT or independently re-QCed.",
+  "date_of_received_qc": "20/11/2026",
+  "previous_revision": "submissions\\quang\\rework-20261121"
+}

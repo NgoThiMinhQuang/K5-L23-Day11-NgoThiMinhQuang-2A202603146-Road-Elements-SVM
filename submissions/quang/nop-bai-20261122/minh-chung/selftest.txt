@@ -1,0 +1,8 @@
+Self-test trên GT tổng hợp (không cần dữ liệu)
+[PASS] GT làm bài nộp: 0 lỗi, điểm tự động 78.0/78
+[PASS] QC1-01 ở A01: mong 1, thấy 1
+[PASS] QC1-04 ở A01: mong 2, thấy 2
+[PASS] QC1-05 ở A01: mong 1, thấy 1
+[PASS] QC1-08 ở A07: mong 1, thấy 1
+[PASS] bản làm nhiễu: 5 lỗi, mong đúng 5
+SELFTEST PASS

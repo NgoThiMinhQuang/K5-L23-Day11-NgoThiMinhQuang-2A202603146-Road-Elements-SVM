@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <image id="1" name="B02_03177_FV.png" width="1280" height="966">
+    <polyline label="lane" source="file" occluded="1" points="1250.60,579.00;1229.00,562.00;1183.50,531.50;1127.70,500.00;1102.60,486.40;1030.10,451.80;981.00,431.70" z_order="0">
+      <attribute name="position">R1</attribute>
+      <attribute name="style">solid</attribute>
+      <attribute name="color">white</attribute>
+      <attribute name="kind">double</attribute>
+    </polyline>
+  </image>
+</annotations>

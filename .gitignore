@@ -3,7 +3,13 @@ __pycache__/
 .pytest_cache/
 data/
 coach_gt/
-submissions/
+submissions/*
+!submissions/quang/
+submissions/quang/*
+!submissions/quang/nop-bai-20261122/
 out/
 *.zip
 .env
+
+# Chỉ đưa bộ nộp cuối đã kiểm tra lên Git; giữ dữ liệu gốc ngoài repo.
+!submissions/quang/nop-bai-20261122/**

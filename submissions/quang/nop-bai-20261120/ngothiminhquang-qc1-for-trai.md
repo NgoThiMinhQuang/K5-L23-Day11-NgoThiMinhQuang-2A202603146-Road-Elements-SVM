@@ -108,9 +108,9 @@ Sau sửa: export lại các task liên quan, gửi manifest và phản hồi c�
 
 ## Tài liệu và số liệu kiểm
 
-- [Guideline Road v1.0](minh-chung/docs/guideline_road_v1.0.md).
-- [Thang mức lỗi QC](minh-chung/docs/qc_severity_road_v1.0.md).
-- [Mẫu phiếu của repo](minh-chung/templates/qc1_form.md).
-- [Dữ liệu đếm nhãn, SHA-256 và cảnh báo](minh-chung/out/qc-trai/inspection.json).
+- [Guideline Road v1.0](../../../docs/guideline_road_v1.0.md).
+- [Thang mức lỗi QC](../../../docs/qc_severity_road_v1.0.md).
+- [Mẫu phiếu của repo](../../../templates/qc1_form.md).
+- [Dữ liệu đếm nhãn, SHA-256 và cảnh báo](minh-chung/qc/inspection.json).
 
 **Người kiểm: Ngô Thị Minh Quang.**

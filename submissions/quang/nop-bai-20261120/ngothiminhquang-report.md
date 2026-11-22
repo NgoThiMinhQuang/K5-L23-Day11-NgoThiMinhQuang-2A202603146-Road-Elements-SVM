@@ -60,7 +60,7 @@ Cách xử lý cảnh báo L1/R1 và phạm vi ngoại lệ của bộ bàn giao
 ## 4. Phiếu QC 1 nhận được và phản hồi
 
 **Người kiểm:** Bùi Kim Trại. **Ngày phiếu:** 20/11/2026.  
-**Phiếu nhận:** [trai-qc1-for-ngothiminhquang.md](minh-chung/reports/qc-received/trai-qc1-for-ngothiminhquang.md).  
+**Phiếu nhận:** [trai-qc1-for-ngothiminhquang.md](minh-chung/qc/trai-qc1-for-ngothiminhquang.md).  
 **Quyết định:** Rework. Mẫu A02/A08/A10/B02/B06/B08 có 118 nhãn; một lỗi nặng, năm lỗi chính, 5/118=4,24%. B11 có sáu lỗi nặng, xét riêng.
 
 | Lỗi | Số lỗi | Đồng ý / phản hồi | Đã sửa? |
@@ -73,7 +73,7 @@ Cách xử lý cảnh báo L1/R1 và phạm vi ngoại lệ của bộ bàn giao
 | F06, QC1-04, B02 | 1 chính | Thay đường vòng bằng tâm vạch đôi | Đã thay polyline hở gần → xa |
 | E01–E06, QC1-03, B11 | 6 nặng, ảnh thêm | Ô đỗ/gạch chéo không gán lane | Đã bỏ sáu lane |
 
-Đã sửa bổ sung tag weather A10 từ clear thành rain theo guideline. Ngoài phiếu nhận, tự sửa thêm: bỏ lane ngang ở A06; gộp cách biểu diễn vạch đôi A09 và A14; vẽ lại hai vùng drivable A14 qua xe phía trước. Nhật ký sửa được giữ trong [changes.json](minh-chung/changes.json). Số lỗi trong phiếu nhận là kết quả kiểm bản trước sửa, được giữ nguyên để truy vết.
+Đã sửa bổ sung tag weather A10 từ clear thành rain theo guideline. Ngoài phiếu nhận, tự sửa thêm: bỏ lane ngang ở A06; gộp cách biểu diễn vạch đôi A09 và A14; vẽ lại hai vùng drivable A14 qua xe phía trước. Nhật ký sửa được giữ trong [changes.json](minh-chung/nhat-ky/changes.json). Số lỗi trong phiếu nhận là kết quả kiểm bản trước sửa, được giữ nguyên để truy vết.
 
 **Phiếu tôi kiểm Trại:** [ngothiminhquang-qc1-for-trai.md](ngothiminhquang-qc1-for-trai.md), ngày 20/11/2026. Đủ 12 mã QC; mẫu bắt buộc 118 nhãn; một lỗi nặng và năm lỗi chính (4,24%), quyết định Rework. B11 được xét riêng. Việc sửa lô của tôi không thay đổi kết quả phiếu tôi lập cho Trại.
 
@@ -90,42 +90,42 @@ Bốn ZIP ở định dạng CVAT for images 1.1, mỗi ZIP chỉ chứa `annota
 
 **Manifest bàn giao:** revision 2, bản sửa sau Rework. SHA-256, số byte và thời điểm tạo file được ghi trong manifest.
 
-**Kết quả lint:** bốn cảnh báo nặng QC1-02, không có cảnh báo chính/nhẹ: A05 thiếu L1 và R1; A09 thiếu R1; A14 thiếu R1. Log đầy đủ: [lint.txt](minh-chung/lint.txt). Lint kiểm định dạng và một số quy tắc, không chấm độ sát hình hoặc nhãn bỏ sót theo GT.
+**Kết quả lint:** bốn cảnh báo nặng QC1-02, không có cảnh báo chính/nhẹ: A05 thiếu L1 và R1; A09 thiếu R1; A14 thiếu R1. Log đầy đủ: [lint.txt](minh-chung/kiem-tra/lint.txt). Lint kiểm định dạng và một số quy tắc, không chấm độ sát hình hoặc nhãn bỏ sót theo GT.
 
 **Ngoại lệ áp dụng cho bài lab ngày 20/11/2026:**
 
 1. Giữ nguyên nhãn ở A05/A09/A14 và ghi nhận bốn cảnh báo QC1-02 trên là ngoại lệ; không thêm vạch suy đoán. Manifest vẫn phản ánh đúng bốn cảnh báo.
 2. Bước chốt nhãn trên CVAT và kiểm lại sau sửa, gồm đối chiếu job/file, completed và export lại, được ghi nhận là ngoại lệ. Vì vậy cột số shape trên job ghi “ngoại lệ”, không điền số chưa kiểm chứng.
 
-Chi tiết lưu trong [ghi nhận ngoại lệ](minh-chung/ngoai-le.md). Đây là xác nhận của học viên trong quá trình hoàn thiện hồ sơ; chưa có xác nhận riêng của coach cho từng cảnh báo hoặc quyết định Release mới của người kiểm trong hồ sơ.
+Chi tiết lưu trong [ghi nhận ngoại lệ](minh-chung/nhat-ky/ngoai-le.md). Đây là xác nhận của học viên trong quá trình hoàn thiện hồ sơ; chưa có xác nhận riêng của coach cho từng cảnh báo hoặc quyết định Release mới của người kiểm trong hồ sơ.
 
-**Kiểm công cụ:** **31/31 test đạt**; `road_check selftest` in **SELFTEST PASS** trên dữ liệu tổng hợp. ZIP/CRC/XML, SHA-256, số lượng nhãn, trích đoạn XML và các liên kết minh chứng đều hợp lệ. Không dùng selftest để suy ra điểm chất lượng nhãn. Kết quả rà soát: [verification.json](minh-chung/verification.json).
+**Kiểm công cụ:** **31/31 test đạt**; `road_check selftest` in **SELFTEST PASS** trên dữ liệu tổng hợp. ZIP/CRC/XML, SHA-256, số lượng nhãn, trích đoạn XML và các liên kết minh chứng đều hợp lệ. Không dùng selftest để suy ra điểm chất lượng nhãn. Kết quả rà soát: [verification.json](minh-chung/kiem-tra/verification.json).
 
 ## 6. Ảnh chụp và bằng chứng
 
 ### 6.1. Labels của project
 
-![Project day11-road-NgoThiMinhQuang và các label](minh-chung/anh-chup-moi/01-labels.png)
+![Project day11-road-NgoThiMinhQuang và các label](minh-chung/anh/01-labels.png)
 
 Ảnh thể hiện tên project, sáu label hình (lane, road_curb, crosswalk, drivable, traffic_light, traffic_sign) và bốn label tag (camera, timeofday, weather, source).
 
 ### 6.2. Ảnh camera trước A10
 
-![A10 với lane, drivable, đèn, biển và bốn tag](minh-chung/anh-chup-moi/02-front-A10.png)
+![A10 với lane, drivable, đèn, biển và bốn tag](minh-chung/anh/02-front-A10.png)
 
 Ảnh cho thấy các đường lane, vùng drivable, road_curb, hộp đèn/biển và bốn tag. Biển NO PARKING / NO STANDING hiển thị group=prohibitory, minh họa việc sửa F05. Giá trị bốn tag được kiểm từ XML bàn giao.
 
 ### 6.3. Ảnh fisheye B02
 
-![B02 với polyline R1 và bảng thuộc tính](minh-chung/anh-chup-moi/03-fisheye-B02.png)
+![B02 với polyline R1 và bảng thuộc tính](minh-chung/anh/03-fisheye-B02.png)
 
 Polyline được chọn có các điểm bám theo cung và bảng thuộc tính position=R1, style=solid, color=white, kind=double. Ảnh minh họa cách biểu diễn một đường tâm hở cho vạch đôi; không tự suy ra độ lệch so với GT từ ảnh chụp.
 
 ### 6.4. XML của bộ nộp
 
-![Trích đoạn lane-evidence.xml của B02](minh-chung/anh-chup-moi/04-xml.png)
+![Trích đoạn lane-evidence.xml của B02](minh-chung/anh/04-xml.png)
 
-Ảnh chụp trình soạn thảo hiển thị tên ảnh B02, thẻ polyline label="lane", các tọa độ và bốn thuộc tính. Tệp trích đoạn được lấy từ ZIP bàn giao: [lane-evidence.xml](minh-chung/lane-evidence.xml).
+Ảnh chụp trình soạn thảo hiển thị tên ảnh B02, thẻ polyline label="lane", các tọa độ và bốn thuộc tính. Tệp trích đoạn được lấy từ ZIP bàn giao: [lane-evidence.xml](minh-chung/xml/lane-evidence.xml).
 
 Đoạn XML thực tế của R1 ở B02 sau sửa, khớp ZIP fisheye cuối:
 

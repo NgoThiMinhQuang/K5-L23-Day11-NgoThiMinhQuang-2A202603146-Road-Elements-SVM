@@ -33,4 +33,3 @@ B12_05885_MVR.png: crosswalk 3, drivable 1, lane 1, road_curb 1
 [QC1-02 nặng] A14 lane: chưa có R1 (bỏ qua nếu thật sự không thấy vạch)
 
 28 ảnh, 4 cảnh báo. Lint chỉ là gợi ý; GT và người kiểm mới quyết định lỗi.
-Manifest bàn giao → submissions\quang\nop-bai-20261120\ngothiminhquang-manifest.json

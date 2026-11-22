@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-11-22T02:01:46.101672+00:00",
+  "checks": {
+    "tests_passed": 31,
+    "selftest": "PASS (synthetic data)",
+    "zip_crc_xml": "PASS",
+    "manifest_sha256_bytes": "PASS",
+    "images": 28,
+    "shapes": 310,
+    "tags": 112,
+    "new_screenshots": 4,
+    "xml_excerpt_matches_submission": true,
+    "camera_values_match_filenames": true,
+    "side_camera_lanes_position_other": true,
+    "A10_weather": "rain (wet road, per Road v1.0)",
+    "submission_files": 7,
+    "zip_images": {
+      "ngothiminhquang-front.zip": 12,
+      "ngothiminhquang-front-extra.zip": 4,
+      "ngothiminhquang-fisheye.zip": 8,
+      "ngothiminhquang-fisheye-extra.zip": 4
+    },
+    "annotations_unchanged_after_split": true,
+    "all_repository_markdown_links": "PASS",
+    "report_sections_1_to_8": "PASS",
+    "qc_codes_01_to_12": "PASS",
+    "evidence_structure": [
+      "anh",
+      "qc",
+      "xml",
+      "kiem-tra",
+      "nhat-ky"
+    ],
+    "annotation_zips_unchanged_after_reorganization": true
+  },
+  "lint": {
+    "nặng": 4,
+    "chính": 0,
+    "nhẹ": 0
+  },
+  "exceptions": "See report section 5 and ngoai-le.md. User-confirmed exceptions; no new coach Release asserted.",
+  "requirements_status": {
+    "packaging": "Four separate ZIPs per user request; differs from original two-ZIP submission format.",
+    "lane_warnings": "4 QC1-02 warnings; user exceptions recorded, no coach confirmation supplied.",
+    "cvat_completion_and_recheck": "User exception; not independently verified.",
+    "r1_backup": "Not in submission after user-requested cleanup; committed changes retained in Git history.",
+    "quality_score": "Not assessed without coach GT."
+  }
+}
